@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body { background: #070d0a; }
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: #f2f5ec;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: #c8ff4d; color: #070d0a; }
+
+@layer components {
+  /* Headline letters: muted until the car's front edge passes them */
+  .hero-letter {
+    display: inline-block;
+    color: #3f4f45;
+    transition: color 0.3s ease;
+  }
+  .hero-letter.is-lit {
+    color: #f6f9f0;
+  }
+  .stat-card {
+    @apply rounded-xl border border-white/10 bg-[#101a14] p-4 will-change-[transform,opacity] md:p-5;
+  }
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(220, 235, 215, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(220, 235, 215, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 50% 45%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 45%, #000 20%, transparent 75%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
