@@ -1,5 +1,7 @@
 # ITZFIZZ Digital — Scroll-Driven Hero
 
+**Live Demo:** [View the deployed website](https://devpatel1479.github.io/itzfizz-scroll-hero/)
+
 A responsive recreation of the ITZFIZZ scroll-driven hero assignment, built with React, Vite, Tailwind CSS, and GSAP ScrollTrigger. A letter-spaced "WELCOME ITZFIZZ" headline sits above a car that is driven across the screen by page scroll. As the car moves, a lime trail follows it, the headline letters light up as it passes, and four impact statistics appear one by one.
 
 
@@ -20,14 +22,14 @@ A responsive recreation of the ITZFIZZ scroll-driven hero assignment, built with
 
 ## Run locally
 
-Requires Node.js 20+.
+
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+
 
 ## Production build
 
